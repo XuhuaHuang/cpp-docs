@@ -12,18 +12,20 @@ ms.custom: devdivchpfy22
 
 The `type_index` class wraps a pointer to [type_info Class](../cpp/type-info-class.md) to assist in indexing by such objects.
 
+```cpp
 class type_index {
-   public:
-   type_index(const type_info& tinfo);
-   const char *name() const;
-   size_t hash_code() const;
-   bool operator==(const type_info& right) const;
-   bool operator!=(const type_info& right) const;
-   bool operator<(const type_info& right) const;
-   bool operator\<=(const type_info& right) const;
-   bool operator>(const type_info& right) const;
-   bool operator>=(const type_info& right) const;
-   };
+public:
+    type_index(const type_info& tinfo);
+    const char *name() const;
+    size_t hash_code() const;
+    bool operator==(const type_info& right) const;
+    bool operator!=(const type_info& right) const;
+    bool operator<(const type_info& right) const;
+    bool operator<=(const type_info& right) const;
+    bool operator>(const type_info& right) const;
+    bool operator>=(const type_info& right) const;
+};
+```
 
 The constructor initializes `ptr` to `&tinfo`.
 
